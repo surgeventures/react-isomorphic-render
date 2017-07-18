@@ -645,10 +645,10 @@ var Http_request = function () {
 					// (e.g. PUT, DELETE)
 					// then resolve with an empty result.
 					if (response.statusCode === 204) {
-						return resolve(undefined, response.headers);
+						return resolve(response.headers);
 					}
 
-					resolve(_this2.get_response_data(response), response.headers);
+					resolve(_this2.get_response_data(response));
 				});
 			});
 		}
